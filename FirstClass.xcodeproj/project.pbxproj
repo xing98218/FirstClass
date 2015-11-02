@@ -485,6 +485,7 @@
 				339D94DA1BD9E3F1007945C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		339D94DB1BD9E3F1007945C4 /* Build configuration list for PBXNativeTarget "FirstClassTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +494,7 @@
 				339D94DD1BD9E3F1007945C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		339D94DE1BD9E3F1007945C4 /* Build configuration list for PBXNativeTarget "FirstClassUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +503,7 @@
 				339D94E01BD9E3F1007945C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
