@@ -15,6 +15,7 @@
 		339D94BE1BD9E3F0007945C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 339D94BC1BD9E3F0007945C4 /* LaunchScreen.storyboard */; };
 		339D94C91BD9E3F0007945C4 /* FirstClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339D94C81BD9E3F0007945C4 /* FirstClassTests.swift */; };
 		339D94D41BD9E3F1007945C4 /* FirstClassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339D94D31BD9E3F1007945C4 /* FirstClassUITests.swift */; };
+		33C431F21BE8644400736A1F /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C431F11BE8644400736A1F /* TabbarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		339D94CF1BD9E3F1007945C4 /* FirstClassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstClassUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		339D94D31BD9E3F1007945C4 /* FirstClassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstClassUITests.swift; sourceTree = "<group>"; };
 		339D94D51BD9E3F1007945C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33C431F11BE8644400736A1F /* TabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				339D94BC1BD9E3F0007945C4 /* LaunchScreen.storyboard */,
 				339D94BF1BD9E3F0007945C4 /* Info.plist */,
 				339D94B71BD9E3F0007945C4 /* FirstClass.xcdatamodeld */,
+				33C431F11BE8644400736A1F /* TabbarViewController.swift */,
 			);
 			path = FirstClass;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C431F21BE8644400736A1F /* TabbarViewController.swift in Sources */,
 				339D94B31BD9E3F0007945C4 /* ViewController.swift in Sources */,
 				339D94B11BD9E3F0007945C4 /* AppDelegate.swift in Sources */,
 				339D94B91BD9E3F0007945C4 /* FirstClass.xcdatamodeld in Sources */,
