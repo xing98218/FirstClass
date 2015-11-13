@@ -8,12 +8,15 @@
 
 import UIKit
 
-class MessageTableViewController: UITableViewController {
+class MessageTableViewController: UITableViewController,UISearchResultsUpdating {
     var sourse:[MessageModel]?
+    var FilterSourse:[MessageModel]?
+    var searchctr:UISearchController=UISearchController(searchResultsController:nil)
     override func viewDidLoad() {
         super.viewDidLoad()
         //构造数据源
          sourse=[]
+        
         
         let message1=MessageModel()
          message1.Img=UIImage(named: "qq")
@@ -30,6 +33,14 @@ class MessageTableViewController: UITableViewController {
         sourse?.append(message2)
 
         
+        
+        searchctr.searchBar.placeholder="搜索"
+        searchctr.searchResultsUpdater=self
+        searchctr.dimsBackgroundDuringPresentation=false
+        searchctr.searchBar.sizeToFit()
+        self.tableView.tableHeaderView=searchctr.searchBar
+
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -51,35 +62,63 @@ class MessageTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if(searchctr.active && searchctr.searchBar.text==""){
+            return 1
+        }
+        else if(searchctr.active){
+            return FilterSourse!.count
+        }
         return sourse!.count
     }
 
    //根据行号返回行样式
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+         if(searchctr.active && searchctr.searchBar.text==""){
+            let cell = tableView.dequeueReusableCellWithIdentifier("emptyCell", forIndexPath: indexPath)
+            cell.backgroundColor=UIColor.clearColor()
+            return cell
+
+        }
+         else{
+         var cellsourse=sourse![indexPath.row]
+            if(searchctr.active){
+                cellsourse=FilterSourse![indexPath.row]
+            }
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
        let img=cell.viewWithTag(100) as! UIImageView
-        img.image=sourse![indexPath.row].Img
+        img.image=cellsourse.Img
         
         let title=cell.viewWithTag(101) as! UILabel
-        title.text=sourse![indexPath.row].Title
+        title.text=cellsourse.Title
         
         let content=cell.viewWithTag(102) as! UILabel
-        content.text=sourse![indexPath.row].Content
+        content.text=cellsourse.Content
         
         let date=cell.viewWithTag(103) as! UILabel
-        date.text=sourse![indexPath.row].date
+        date.text=cellsourse.date
         
         return cell
+        }
     }
    
     
     //自定义行高度
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath)-> CGFloat{
+        if(searchctr.active && searchctr.searchBar.text==""){
+            return 400
+        }
        return 60
     }
 
-
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+            let searchString = searchController.searchBar.text
+      FilterSourse = sourse!.filter({(RowObj:MessageModel) -> Bool in
+            return (RowObj.Title!.containsString(searchString!) || RowObj.Content!.containsString(searchString!))
+        })
+        self.tableView.reloadData()
+        
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
