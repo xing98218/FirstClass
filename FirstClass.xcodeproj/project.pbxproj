@@ -18,6 +18,8 @@
 		33C431F21BE8644400736A1F /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C431F11BE8644400736A1F /* TabbarViewController.swift */; };
 		33C431F41BE8BB6000736A1F /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C431F31BE8BB6000736A1F /* MessageTableViewController.swift */; };
 		33C431F71BE9A72E00736A1F /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C431F61BE9A72E00736A1F /* MessageModel.swift */; };
+		33EC70ED1BFB256A0027EDE7 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EC70EC1BFB256A0027EDE7 /* AddressModel.swift */; };
+		33FD65461BF9BB9F00428E12 /* AddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FD65451BF9BB9F00428E12 /* AddressTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		33C431F11BE8644400736A1F /* TabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		33C431F31BE8BB6000736A1F /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		33C431F61BE9A72E00736A1F /* MessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		33EC70EC1BFB256A0027EDE7 /* AddressModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
+		33FD65451BF9BB9F00428E12 /* AddressTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 				339D94B71BD9E3F0007945C4 /* FirstClass.xcdatamodeld */,
 				33C431F11BE8644400736A1F /* TabbarViewController.swift */,
 				33C431F31BE8BB6000736A1F /* MessageTableViewController.swift */,
+				33FD65451BF9BB9F00428E12 /* AddressTableViewController.swift */,
 			);
 			path = FirstClass;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				33C431F61BE9A72E00736A1F /* MessageModel.swift */,
+				33EC70EC1BFB256A0027EDE7 /* AddressModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -280,7 +286,9 @@
 				339D94B31BD9E3F0007945C4 /* ViewController.swift in Sources */,
 				33C431F41BE8BB6000736A1F /* MessageTableViewController.swift in Sources */,
 				339D94B11BD9E3F0007945C4 /* AppDelegate.swift in Sources */,
+				33FD65461BF9BB9F00428E12 /* AddressTableViewController.swift in Sources */,
 				339D94B91BD9E3F0007945C4 /* FirstClass.xcdatamodeld in Sources */,
+				33EC70ED1BFB256A0027EDE7 /* AddressModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
